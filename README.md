@@ -1,7 +1,6 @@
 <div align="center">
-<!-- Generated with AsciiMe (https://ascii-me-psi.vercel.app) -->
-<!-- Upload ascii-art.png to your repo then update the path below -->
-![ASCII art](./ascii-art.png)
+<img width="1021" height="888" alt="ascii-art" src="https://github.com/user-attachments/assets/b2d2a032-fd5c-4380-8e8f-a4929d999f3c" />
+
 # ⚡ Kelvin Anaman
 
 ### Founder & CEO • Pulse Organization
