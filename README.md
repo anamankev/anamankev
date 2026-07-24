@@ -1,5 +1,6 @@
 <div align="center">
-<img width="1021" height="888" alt="ascii-art" src="https://github.com/user-attachments/assets/b2d2a032-fd5c-4380-8e8f-a4929d999f3c" />
+<img width="505" height="442" alt="ascii-art (1)" src="https://github.com/user-attachments/assets/30509a2b-64de-459a-9dfc-7fb9d59f5751" />
+
 
 # ⚡ Kelvin Anaman
 
