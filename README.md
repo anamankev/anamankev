@@ -46,133 +46,125 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 
 </div>
 
+# 🚀 Featured Projects
+
+<div align="center">
+  <em>"Engineering intelligent systems that bridge software, AI, and critical infrastructure."</em>
+</div>
+
 <br>
 
 <table>
-
 <tr>
-
 <td width="50%" valign="top">
 
-## ⚡ Pulse OS
+<h2>⚡ Pulse OS</h2>
+<p><em>Building the Operating System for Electricity.</em></p>
 
-### *Building the Operating System for Electricity.*
+<p>An AI-first platform designed to orchestrate modern electricity grids through real-time optimization, intelligent forecasting, distributed control systems, and physics-constrained machine learning.</p>
 
-An AI-first platform designed to orchestrate modern electricity grids through real-time optimization, intelligent forecasting, distributed control systems, and physics-constrained machine learning.
+<h4>Highlights</h4>
+<ul>
+  <li>⚡ Grid Orchestration</li>
+  <li>🤖 AI-assisted Dispatch</li>
+  <li>📊 Load Forecasting</li>
+  <li>🔋 Renewable Integration</li>
+  <li>🌍 Built for Emerging Markets</li>
+</ul>
 
-#### Highlights
-
-- ⚡ Grid Orchestration
-- 🤖 AI-assisted Dispatch
-- 📊 Load Forecasting
-- 🔋 Renewable Integration
-- 🌎 Built for Emerging Markets
-
-#### Technologies
-
-`Python`
-`C++`
-`TypeScript`
-`Embedded Systems`
-`Docker`
-`FastAPI`
+<h4>Technologies</h4>
+<p>
+<code>Python</code>
+<code>C++</code>
+<code>TypeScript</code>
+<code>Embedded Systems</code>
+<code>Docker</code>
+<code>FastAPI</code>
+</p>
 
 </td>
 
 <td width="50%" valign="top">
 
-## 🔥 SmartPyro
+<h2>🔥 SmartPyro</h2>
+<p><em>Physics-informed machine learning framework for optimizing waste-to-energy conversion through intelligent pyrolysis modeling.</em></p>
 
-Physics-informed machine learning framework for optimizing waste-to-energy conversion through intelligent pyrolysis modeling.
+<h4>Highlights</h4>
+<ul>
+  <li>Scientific Computing</li>
+  <li>Numerical Simulation</li>
+  <li>Heat Transfer Modeling</li>
+  <li>Sustainable Energy</li>
+  <li>ASME ES2026 Research Conference</li>
+  <li>IOCEN 2026 Conference</li>
+</ul>
 
-#### Highlights
-
-- Scientific Computing
-- Numerical Simulation
-- Heat Transfer Modeling
-- Sustainable Energy
-- ASME ES2026 Research Conference
-- IOCEN 2026 Conference
-
-#### Technologies
-
-`Python`
-`NumPy`
-`SciPy`
-`Matplotlib`
-`XGBoost`
+<h4>Technologies</h4>
+<p>
+<code>Python</code>
+<code>NumPy</code>
+<code>SciPy</code>
+<code>Matplotlib</code>
+<code>XGBoost</code>
+</p>
 
 </td>
-
 </tr>
 
 <tr>
+<td width="50%" valign="top">
+
+<h2>⚛️ Vector Boson Polarization ML</h2>
+<p><em>Machine learning for precision electroweak physics at the LHC.</em></p>
+
+<p>A physics-informed ML framework for event-by-event discrimination of longitudinal and transverse polarization states in vector boson scattering and fusion processes, combining exact amplitude calculations with Lorentz-equivariant neural networks.</p>
+
+<h4>Highlights</h4>
+<ul>
+  <li>🧮 Amplitude-Assisted Machine Learning</li>
+  <li>⚛️ Lorentz-Equivariant Architectures</li>
+  <li>📈 99.2% Discrimination Fidelity</li>
+  <li>🛡️ Adversarial Background Suppression</li>
+  <li>🔬 LHC Vector Boson Scattering / Fusion</li>
+</ul>
+
+<h4>Technologies</h4>
+<p>
+<code>Python</code>
+<code>PyTorch</code>
+<code>NumPy</code>
+<code>SciPy</code>
+<code>Matplotlib</code>
+</p>
+
+</td>
 
 <td width="50%" valign="top">
 
-### ⚛️ Vector Boson Polarization ML
+<h2>⚙ Embedded Intelligence</h2>
+<p><em>Firmware and embedded software connecting physical energy infrastructure with AI-powered control systems.</em></p>
 
-*Machine learning for precision electroweak physics at the LHC.*
+<h4>Focus Areas</h4>
+<ul>
+  <li>Edge AI</li>
+  <li>Microcontrollers</li>
+  <li>Real-Time Systems</li>
+  <li>Hardware Integration</li>
+  <li>IoT Infrastructure</li>
+</ul>
 
-A physics-informed ML framework for event-by-event discrimination of longitudinal and transverse polarization states in vector boson scattering and fusion processes, combining exact amplitude calculations with Lorentz-equivariant neural networks to achieve high-fidelity polarization classification.
+<h4>Technologies</h4>
+<p>
+<code>C</code>
+<code>C++</code>
+<code>Arduino</code>
+<code>ESP32</code>
+<code>STM32</code>
+</p>
 
-**Highlights**
-
-- 🧮 Amplitude-Assisted Machine Learning
-- ⚛️ Lorentz-Equivariant Architectures
-- 📈 99.2% Discrimination Fidelity
-- 🛡️ Adversarial Background Suppression
-- 🔬 LHC Vector Boson Scattering / Fusion
-
-**Technologies**
-
-`Python`
-`PyTorch`
-`NumPy` 
-`SciPy` 
-`Matplotlib`
 </td>
 </tr>
 </table>
-
-<td width="50%" valign="top">
-</td>
-
-## ⚙ Embedded Intelligence
-
-Firmware and embedded software connecting physical energy infrastructure with AI-powered control systems.
-
-#### Focus Areas
-
-- Edge AI
-
-- Microcontrollers
-
-- Real-Time Systems
-
-- Hardware Integration
-
-- IoT Infrastructure
-
-#### Technologies
-
-`C`
-
-`C++`
-
-`Arduino`
-
-`ESP32`
-
-`STM32`
-
-</td>
-
-</tr>
-
-</table>
-
----
 
 # 🔬 Research Interests
 
