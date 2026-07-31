@@ -228,7 +228,7 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 | Distributed Energy Systems | Building scalable electricity infrastructure |
 | Physics-Constrained AI | Reliable scientific machine learning |
 | Reinforcement Learning | Intelligent grid optimization |
-| Multi-Agent Systems | Autonomous decision making |
+| Large Language Models | Autonomous decision making |
 | Embedded Firmware | Hardware-software integration |
 | High Performance Computing | Large-scale scientific simulations |
 
