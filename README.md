@@ -54,7 +54,7 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 
 <td width="50%" valign="top">
 
-## ⚡ Pulse Organization
+## ⚡ Pulse OS
 
 ### *Building the Operating System for Electricity.*
 
@@ -91,7 +91,8 @@ Physics-informed machine learning framework for optimizing waste-to-energy conve
 - Numerical Simulation
 - Heat Transfer Modeling
 - Sustainable Energy
-- ASME ES2026 Research
+- ASME ES2026 Research Conference
+- IOCEN 2026 Conference
 
 #### Technologies
 
