@@ -37,7 +37,7 @@
 
 My mission is to build intelligent infrastructure capable of transforming how electricity is generated, distributed, optimized, and consumed around the world.
 
-Everything I build moves toward that vision.
+Everything I build as the Founder & CEO of Pulse moves toward that vision.
 # 🚀 Featured Projects
 
 <div align="center">
