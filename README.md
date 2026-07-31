@@ -174,7 +174,7 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 |------|---------------|
 | ⚡ Energy Systems | Intelligent Electricity Grids |
 | 🤖 Artificial Intelligence | Physics-Constrained Machine Learning |
-| 🧠 Multi-Agent Systems | Autonomous Reasoning |
+| 🧠 Large Language Models | Autonomous Reasoning |
 | 🔌 Embedded Systems | Firmware & Edge Computing |
 | 📊 Optimization | Grid Scheduling & Control |
 | 🌍 Sustainability | AI for Global Infrastructure |
