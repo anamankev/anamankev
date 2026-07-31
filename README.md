@@ -19,18 +19,11 @@
 
 <br>
 
-<div align="center">
+<div align="justify">
 
 
-![](https://img.shields.io/badge/AI%20Engineer-Machine%20Learning-blue?style=for-the-badge)
+![](https://img.shields.io/badge/Machine%20Learning-LLM%20Research-blue?style=for-the-badge)![](https://img.shields.io/badge/Mathematical%20Modelling-orange?style=for-the-badge)![](https://img.shields.io/badge/Software%20Engineering-success?style=for-the-badge)![](https://img.shields.io/badge/Brandeis-Wien%20Scholar-red?style=for-the-badge)
 
-![](https://img.shields.io/badge/Physics-Constrained%20ML-orange?style=for-the-badge)
-
-![](https://img.shields.io/badge/Embedded%20Systems-success?style=for-the-badge)
-
-![](https://img.shields.io/badge/Brandeis-Wien%20Scholar-red?style=for-the-badge)
-
-![](https://img.shields.io/badge/Made%20in-Ghana-black?style=for-the-badge)
 
 </div>
 
