@@ -135,6 +135,9 @@ A physics-informed ML framework for event-by-event discrimination of longitudina
 </tr>
 </table>
 
+<td width="50%" valign="top">
+</td>
+
 ## ⚙ Embedded Intelligence
 
 Firmware and embedded software connecting physical energy infrastructure with AI-powered control systems.
