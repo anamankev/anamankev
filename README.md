@@ -33,9 +33,7 @@
 
 # ⚡ Philosophy
 
-> **"The grid of the next billion people won't be built with the tools of the last one."**
-
-I believe that electricity is one of humanity's greatest force multipliers.
+> **"We envision a future where every electricity grid runs on intelligent software."**
 
 My mission is to build intelligent infrastructure capable of transforming how electricity is generated, distributed, optimized, and consumed around the world.
 
