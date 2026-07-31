@@ -180,33 +180,25 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 
 <div align="center">
 
-## Programming Languages
+### Programming Languages
 
-<img src="https://skillicons.dev/icons?i=python,cpp,c,typescript,javascript,go,rust"/>
+<img src="https://skillicons.dev/icons?i=python,cpp,java,typescript,javascript,rust"/>
 
 <br><br>
 
-## Artificial Intelligence
+### Artificial Intelligence
 
 <img src="https://skillicons.dev/icons?i=pytorch,tensorflow"/>
 
 <br><br>
 
-## Backend Development
+### Backend Development
 
 <img src="https://skillicons.dev/icons?i=fastapi,nodejs,docker"/>
 
 <br><br>
 
-## Java
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=java" />
-</p>
-
-<br><br>
-
-## Development Tools
+### Development Tools
 
 <img src="https://skillicons.dev/icons?i=vscode,clion,pycharm"/>
 
