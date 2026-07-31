@@ -198,9 +198,11 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 
 <br><br>
 
-## Cloud & DevOps
+## Java
 
-<img src="https://skillicons.dev/icons?i=aws,linux,git,github"/>
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=java" />
+</p>
 
 <br><br>
 
