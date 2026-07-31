@@ -2,11 +2,12 @@
 <img width="505" height="442" alt="ascii-art (1)" src="https://github.com/user-attachments/assets/30509a2b-64de-459a-9dfc-7fb9d59f5751" />
 
 
-# ⚡ Kelvin Anaman
-
-### Founder & CEO • Pulse Organization
-
-### *Building the Operating System for Electricity.*
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=24&pause=1000&color=FFFFFF&background=0D1117&center=true&vCenter=true&width=600&height=60&lines=Hello!+This+is;Kelvin+Anaman+Here" alt="Typing SVG" />
+  </a>
+  
+</p>
 
 </div>
 
@@ -35,8 +36,6 @@
 
 <br>
 
-<!-- Banner / "slideshow" GIF --> <p align="center"> <img src="https://your-image-host.com/banner.gif" width="100%" alt="banner"/> </p> <!-- Styled heading using capsule-render --> <p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&text=Hello!%20This%20is%20Kelvin%20Anaman%20Here&fontAlign=50&fontAlignY=35&fontColor=ffffff&fontSize=30&desc=Font%20style:%20monospace&descAlign=50&descAlignY=55" alt="header"/> </p> <p align="center"> <a href="#"> <img src="https://img.shields.io/badge/Software%20Engineer-000000?style=for-the-badge" alt="role"/> </a> </p>
----
 
 # ⚡ Philosophy
 
