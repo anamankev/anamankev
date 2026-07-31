@@ -110,32 +110,30 @@ Physics-informed machine learning framework for optimizing waste-to-energy conve
 
 <td width="50%" valign="top">
 
-## 🤖 Multi-Agent AI
+### ⚛️ Vector Boson Polarization ML
 
-A hierarchical multi-agent reasoning system capable of planning, tool usage, self-correction, and autonomous task execution.
+*Machine learning for precision electroweak physics at the LHC.*
 
-#### Features
+A physics-informed ML framework for event-by-event discrimination of longitudinal and transverse polarization states in vector boson scattering and fusion processes, combining exact amplitude calculations with Lorentz-equivariant neural networks to achieve high-fidelity polarization classification.
 
-- Multi-Agent Collaboration
-- Tool Calling
-- Reflection
-- Memory
-- Autonomous Planning
+**Highlights**
 
-#### Technologies
+- 🧮 Amplitude-Assisted Machine Learning
+- ⚛️ Lorentz-Equivariant Architectures
+- 📈 99.2% Discrimination Fidelity
+- 🛡️ Adversarial Background Suppression
+- 🔬 LHC Vector Boson Scattering / Fusion
+
+**Technologies**
 
 `Python`
-
-`LLMs`
-
-`LangGraph`
-
-`OpenAI`
-
+`PyTorch`
+`NumPy` 
+`SciPy` 
+`Matplotlib`
 </td>
-
-<td width="50%" valign="top">
-
+</tr>
+</table>
 ## ⚙ Embedded Intelligence
 
 Firmware and embedded software connecting physical energy infrastructure with AI-powered control systems.
