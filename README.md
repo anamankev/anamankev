@@ -19,7 +19,7 @@
 
 <br>
 
-<div align="justify">
+<div align="center">
 
 ![](https://img.shields.io/badge/Machine%20Learning-LLM%20Research-blue?style=for-the-badge) ![](https://img.shields.io/badge/Mathematical%20Modelling-orange?style=for-the-badge) ![](https://img.shields.io/badge/Software%20Engineering-success?style=for-the-badge) ![](https://img.shields.io/badge/Brandeis-Wien%20Scholar-red?style=for-the-badge)
 
