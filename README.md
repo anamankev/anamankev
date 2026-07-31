@@ -100,6 +100,7 @@ Physics-informed machine learning framework for optimizing waste-to-energy conve
 `NumPy`
 `SciPy`
 `Matplotlib`
+`XGBoost`
 
 </td>
 
