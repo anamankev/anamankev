@@ -107,6 +107,63 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 <tr>
 <td width="50%" valign="top">
 
+<h2>🔎 <a href="https://github.com/anamankev/hnsw-engine">hnsw-engine</a></h2>
+<p><em>Vector search built from first principles.</em></p>
+
+<p>HNSW approximate nearest-neighbour search implemented from the original paper (Malkov &amp; Yashunin) twice: a readable Python reference and a compiled Numba engine proven bit-identical, benchmarked against FAISS and hnswlib.</p>
+
+<h4>Highlights</h4>
+<ul>
+  <li>🎯 Recall within 0.01 of FAISS on three ANN benchmarks</li>
+  <li>⚡ 4,447 queries/s at 95% recall on SIFT-1M, one thread</li>
+  <li>🚀 39x faster than exact search at 1M vectors</li>
+  <li>🔍 Filtered search, int8 quantization, memory-mapped indexes</li>
+  <li>🧪 336 tests, bit-identical Python and Numba engines</li>
+</ul>
+
+<h4>Technologies</h4>
+<p>
+<code>Python</code>
+<code>Numba</code>
+<code>NumPy</code>
+<code>FAISS</code>
+<code>hnswlib</code>
+<code>pytest</code>
+</p>
+
+</td>
+
+<td width="50%" valign="top">
+
+<h2>🎬 <a href="https://github.com/anamankev/two-stage-recsys">two-stage-recsys</a></h2>
+<p><em>A production-style recommender, from retrieval to ranking.</em></p>
+
+<p>Two-tower retrieval (PyTorch) served from hnsw-engine, then a LightGBM LambdaRank ranker, evaluated on MovieLens with full-catalog ranking and bootstrap confidence intervals.</p>
+
+<h4>Highlights</h4>
+<ul>
+  <li>📈 2x tuned matrix factorisation (NDCG@10 0.0906 vs 0.0445)</li>
+  <li>🔁 Holds at 10x scale on MovieLens-10M (0.1047 vs 0.0524)</li>
+  <li>🛡️ Leakage-tested temporal split, paired significance tests</li>
+  <li>⚙️ FastAPI service (0.56 ms server-side per request), Docker image</li>
+</ul>
+
+<h4>Technologies</h4>
+<p>
+<code>Python</code>
+<code>PyTorch</code>
+<code>LightGBM</code>
+<code>FastAPI</code>
+<code>Docker</code>
+<code>pandas</code>
+</p>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="2" valign="top">
+
 <h2>⚛️ Vector Boson Polarization ML</h2>
 <p><em>Machine learning for precision electroweak physics at the LHC.</em></p>
 
@@ -128,31 +185,6 @@ Everything I build as the Founder & CEO of Pulse moves toward that vision.
 <code>NumPy</code>
 <code>SciPy</code>
 <code>Matplotlib</code>
-</p>
-
-</td>
-
-<td width="50%" valign="top">
-
-<h2>⚙ Embedded Intelligence</h2>
-<p><em>Firmware and embedded software connecting physical energy infrastructure with AI-powered control systems.</em></p>
-
-<h4>Focus Areas</h4>
-<ul>
-  <li>Edge AI</li>
-  <li>Microcontrollers</li>
-  <li>Real-Time Systems</li>
-  <li>Hardware Integration</li>
-  <li>IoT Infrastructure</li>
-</ul>
-
-<h4>Technologies</h4>
-<p>
-<code>C</code>
-<code>C++</code>
-<code>Arduino</code>
-<code>ESP32</code>
-<code>STM32</code>
 </p>
 
 </td>
