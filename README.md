@@ -1,470 +1,55 @@
 <div align="center">
 <img width="505" height="442" alt="ascii-art (1)" src="https://github.com/user-attachments/assets/30509a2b-64de-459a-9dfc-7fb9d59f5751" />
-
-
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Press+Start+2P&size=20&pause=1000&color=70747C&background=0D1117&center=true&vCenter=true&width=600&height=60&lines=Hello!+This+is+Kelvin+Anaman" alt="Typing SVG" />
-  </a>
-  
-</p>
-
 </div>
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img src="assets/header-light.svg" width="100%" alt="Kelvin Anaman. ML systems built from the paper up, measured against the best libraries. Computer science and applied math, Brandeis class of 2030. Founder of Pulse Energies.">
+</picture>
 
-<div align="center">
+I study computer science and applied mathematics at Brandeis (Wien Scholar, class of 2030) and I'm the founder of [Pulse Energies](https://pulseenergies.com), where we build software for electricity grids.
 
-</div>
+On GitHub I rebuild the systems I want to understand. I start from the paper, test hard, benchmark against the libraries everyone already trusts, and write down every gap, including the ones that don't flatter me.
 
-<br>
+[LinkedIn](https://www.linkedin.com/in/kelvin-anaman) · [Email](mailto:kanaman@brandeis.edu) · [Pulse Energies](https://pulseenergies.com)
 
-<div align="center">
+## Selected work
 
-![](https://img.shields.io/badge/Machine%20Learning-LLM%20Research-blue?style=for-the-badge) ![](https://img.shields.io/badge/Mathematical%20Modelling-orange?style=for-the-badge) ![](https://img.shields.io/badge/Software%20Engineering-success?style=for-the-badge) ![](https://img.shields.io/badge/Brandeis-Wien%20Scholar-red?style=for-the-badge)
-
-</div>
-
-
-</div>
-
-<br>
-
-
-# ⚡ Philosophy
-
-> **"I envision a future where every electricity grid runs on intelligent software."**
-
-My mission is to build intelligent infrastructure capable of transforming how electricity is generated, distributed, optimized, and consumed around the world.
-
-Everything I build as the Founder & CEO of Pulse moves toward that vision.
-
-# 🚀 Featured Projects
-
-<div align="center">
-  <em>"Engineering intelligent systems that bridge software, AI, and critical infrastructure."</em>
-</div>
-
-<br>
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-<h2>⚡ Pulse OS</h2>
-<p><em>Building the Operating System for Electricity.</em></p>
-
-<p>An AI-first platform designed to orchestrate modern electricity grids through real-time optimization, intelligent forecasting, distributed control systems, and physics-constrained machine learning.</p>
-
-<h4>Highlights</h4>
-<ul>
-  <li>⚡ Grid Orchestration</li>
-  <li>🤖 AI-assisted Dispatch</li>
-  <li>📊 Load Forecasting</li>
-  <li>🔋 Renewable Integration</li>
-  <li>🌍 Built for Emerging Markets</li>
-</ul>
-
-<h4>Technologies</h4>
-<p>
-<code>Python</code>
-<code>C++</code>
-<code>TypeScript</code>
-<code>Embedded Systems</code>
-<code>Docker</code>
-<code>FastAPI</code>
-</p>
-
-</td>
-
-<td width="50%" valign="top">
-
-<h2>🔥 SmartPyro</h2>
-<p><em>Physics-informed machine learning framework for optimizing waste-to-energy conversion through intelligent pyrolysis modeling.</em></p>
-
-<h4>Highlights</h4>
-<ul>
-  <li>Scientific Computing</li>
-  <li>Numerical Simulation</li>
-  <li>Heat Transfer Modeling</li>
-  <li>Sustainable Energy</li>
-  <li>ASME ES2026 Research Conference</li>
-  <li>IOCEN 2026 Conference</li>
-</ul>
-
-<h4>Technologies</h4>
-<p>
-<code>Python</code>
-<code>NumPy</code>
-<code>SciPy</code>
-<code>Matplotlib</code>
-<code>XGBoost</code>
-</p>
-
-</td>
-</tr>
-
-<tr>
-<td width="50%" valign="top">
-
-<h2>🔎 <a href="https://github.com/anamankev/hnsw-engine">hnsw-engine</a></h2>
-<p><em>Vector search built from first principles.</em></p>
-
-<p>HNSW approximate nearest-neighbour search implemented from the original paper (Malkov &amp; Yashunin) twice: a readable Python reference and a compiled Numba engine proven bit-identical, benchmarked against FAISS and hnswlib.</p>
-
-<h4>Highlights</h4>
-<ul>
-  <li>🎯 Recall within 0.01 of FAISS on three ANN benchmarks</li>
-  <li>⚡ 4,447 queries/s at 95% recall on SIFT-1M, one thread</li>
-  <li>🚀 39x faster than exact search at 1M vectors</li>
-  <li>🔍 Filtered search, int8 quantization, memory-mapped indexes</li>
-  <li>🧪 336 tests, bit-identical Python and Numba engines</li>
-</ul>
-
-<h4>Technologies</h4>
-<p>
-<code>Python</code>
-<code>Numba</code>
-<code>NumPy</code>
-<code>FAISS</code>
-<code>hnswlib</code>
-<code>pytest</code>
-</p>
-
-</td>
-
-<td width="50%" valign="top">
-
-<h2>🎬 <a href="https://github.com/anamankev/two-stage-recsys">two-stage-recsys</a></h2>
-<p><em>A production-style recommender, from retrieval to ranking.</em></p>
-
-<p>Two-tower retrieval (PyTorch) served from hnsw-engine, then a LightGBM LambdaRank ranker, evaluated on MovieLens with full-catalog ranking and bootstrap confidence intervals.</p>
-
-<h4>Highlights</h4>
-<ul>
-  <li>📈 2x tuned matrix factorisation (NDCG@10 0.0906 vs 0.0445)</li>
-  <li>🔁 Holds at 10x scale on MovieLens-10M (0.1047 vs 0.0524)</li>
-  <li>🛡️ Leakage-tested temporal split, paired significance tests</li>
-  <li>⚙️ FastAPI service (0.56 ms server-side per request), Docker image</li>
-</ul>
-
-<h4>Technologies</h4>
-<p>
-<code>Python</code>
-<code>PyTorch</code>
-<code>LightGBM</code>
-<code>FastAPI</code>
-<code>Docker</code>
-<code>pandas</code>
-</p>
-
-</td>
-</tr>
-
-<tr>
-<td colspan="2" valign="top">
-
-<h2>⚛️ Vector Boson Polarization ML</h2>
-<p><em>Machine learning for precision electroweak physics at the LHC.</em></p>
-
-<p>A physics-informed ML framework for event-by-event discrimination of longitudinal and transverse polarization states in vector boson scattering and fusion processes, combining exact amplitude calculations with Lorentz-equivariant neural networks.</p>
-
-<h4>Highlights</h4>
-<ul>
-  <li>🧮 Amplitude-Assisted Machine Learning</li>
-  <li>⚛️ Lorentz-Equivariant Architectures</li>
-  <li>📈 99.2% Discrimination Fidelity</li>
-  <li>🛡️ Adversarial Background Suppression</li>
-  <li>🔬 LHC Vector Boson Scattering / Fusion</li>
-</ul>
-
-<h4>Technologies</h4>
-<p>
-<code>Python</code>
-<code>PyTorch</code>
-<code>NumPy</code>
-<code>SciPy</code>
-<code>Matplotlib</code>
-</p>
-
-</td>
-</tr>
-</table>
-
-# 🔬 Research Interests
-
-<div align="center">
-
-| Area | Current Focus |
-|------|---------------|
-| ⚡ Energy Systems | Intelligent Electricity Grids |
-| 🤖 Artificial Intelligence | Physics-Constrained Machine Learning |
-| 🧠 Large Language Models | Autonomous Reasoning |
-| 🔌 Embedded Systems | Firmware & Edge Computing |
-| 📊 Optimization | Grid Scheduling & Control |
-| 🌍 Sustainability | AI for Global Infrastructure |
-
-</div>
-
----
-
-# 🛠 Technology Stack
-
-<div align="center">
-
-### Programming Languages
-
-<img src="https://skillicons.dev/icons?i=python,cpp,java,typescript,javascript,rust"/>
-
-<br><br>
-
-### Artificial Intelligence
-
-<img src="https://skillicons.dev/icons?i=pytorch,tensorflow"/>
-
-<br><br>
-
-### Backend Development
-
-<img src="https://skillicons.dev/icons?i=fastapi,nodejs,docker"/>
-
-<br><br>
-
-### Development Tools
-
-<img src="https://skillicons.dev/icons?i=vscode,clion,pycharm"/>
-
-</div>
-
----
-
-# 📚 Currently Learning
-
-<div align="center">
-
-| 🌱 Learning | Why |
-|------------|-----|
-| Distributed Energy Systems | Building scalable electricity infrastructure |
-| Physics-Constrained AI | Reliable scientific machine learning |
-| Reinforcement Learning | Intelligent grid optimization |
-| Large Language Models | Autonomous decision making |
-| Embedded Firmware | Hardware-software integration |
-| High Performance Computing | Large-scale scientific simulations |
-
-</div>
-
----
-
-# 🏅 Engineering Principles
-
-```text
-✓ Build for impact.
-
-✓ Simplicity scales.
-
-✓ Reliability beats complexity.
-
-✓ Physics still matters.
-
-✓ AI should augment human capability.
-
-✓ Software can transform infrastructure.
-
-✓ Every project should solve a real-world problem.
-```
-
----
-
-# 🌍 What Drives Me
-
-I believe the future of civilization depends on intelligent infrastructure.
-
-Electricity powers education, healthcare, communication, manufacturing, and innovation. Yet millions of people still experience unreliable access to energy.
-
-Through **Pulse Organization**, my goal is to build AI systems that help modernize electricity grids, improve resilience, and enable a cleaner, smarter, and more reliable energy future.
-
-Technology is most meaningful when it improves lives at scale.
-# 📊 GitHub Analytics
-
-<div align="center">
-
-
-
-</div>
-
-<br>
-
-<div align="center">
-
-<img width="98%" src="https://streak-stats.demolab.com?user=anamankev&theme=tokyonight&hide_border=true&background=0D1117&ring=2563EB&fire=3B82F6&currStreakLabel=3B82F6"/>
-
-</div>
-
-<br>
-
-<div align="center">
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=anamankev&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=3B82F6&line=2563EB&point=FFFFFF&area=true&area_color=1E3A5F"/>
-
-
-</div>
-
-# 📈 Engineering Dashboard
-
-<div align="center">
-
-| Focus | Status |
-|-------|--------|
-| ⚡ Pulse Organization | 🚀 Active |
-| 🤖 AI Research | 🔬 Ongoing |
-| ⚙ Embedded Systems | 💻 Building |
-| 🌍 Energy Infrastructure | ⚡ Scaling |
-| 📖 Publications | ✍ Writing |
-| 🚀 Open Source | ❤️ Growing |
-
-</div>
-
-
-# 🎯 2026 Goals
-
-```text
-□ Launch Pulse MVP
-
-□ Deploy first pilot grid
-
-□ Publish additional peer-reviewed research
-
-□ Expand engineering team
-
-□ Open-source core technologies
-
-□ Speak at international conferences
-
-□ Reach 500+ GitHub stars
-
-□ Mentor aspiring engineers
-
-□ Build impactful infrastructure
-
-□ Never stop learning
-```
-
----
-
-# 📰 Publications & Research
-
-## Published
-
-- 📄 SmartPyro — Physics-Based Waste-to-Energy Modeling
-- 📄 AI Applications in Intelligent Energy Systems
-- 📄 Sustainable Computational Engineering
-
-## Current Research
-
-- Physics-Constrained Machine Learning
-
-- Electricity Grid Optimization
-
-- Multi-Agent Autonomous Systems
-
-- Reinforcement Learning for Energy Infrastructure
-
-- AI Safety in Critical Infrastructure
-
----
-
-# 🎤 Leadership
-
-### Founder & CEO
-
-**Pulse Organization**
-
-Building intelligent software infrastructure for modern electricity grids.
-
----
-
-### Wien International Scholar
-
-**Brandeis University**
-
-Computer Science & Applied Mathematics
-
----
-
-### Engineer
-
-Passionate about solving difficult engineering problems at the intersection of
-
-- Artificial Intelligence
-
-- Physics
-
-- Distributed Systems
-
-- Embedded Computing
-
-- Energy Infrastructure
-
----
-
-# 💬 Favorite Quote
-
-<div align="center">
-
-## "The best way to predict the future is to engineer it."
-
-</div>
-
----
-
-# 🤝 Let's Connect
-
-<div align="center">
-
-<a href="https://www.linkedin.com/in/kelvin-anaman">
-
-<img src="https://img.shields.io/badge/LinkedIn-Let's%20Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-
+<a href="https://github.com/anamankev/hnsw-engine">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-hnsw-engine-dark.svg">
+    <img src="assets/card-hnsw-engine-light.svg" width="100%" alt="hnsw-engine. Queries per second at recall 0.95 or better on SIFT-1M, one thread: exact search 114, hnsw-engine 4,447, hnswlib 6,193, FAISS HNSW 10,301.">
+  </picture>
 </a>
 
-&nbsp;
-
-<a href="mailto:kanaman@brandeis.edu">
-
-<img src="https://img.shields.io/badge/Gmail-Email%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
-
-</a>
-
-&nbsp;
-
-<a href="https://github.com/anamankev">
-
-<img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github"/>
-
-</a>
-
-</div>
+**[hnsw-engine](https://github.com/anamankev/hnsw-engine)** is HNSW approximate nearest-neighbour search, implemented from the original paper twice: a readable Python reference, and a compiled Numba engine proven to build the bit-identical graph. It is benchmarked against FAISS and hnswlib with one single-threaded method, and it matches FAISS's recall within 0.01 on three datasets. It also has filtered search, int8 quantization and memory-mapped index files.
+[Benchmarks](https://github.com/anamankev/hnsw-engine/blob/main/docs/BENCHMARKS.md) · [Performance notes](https://github.com/anamankev/hnsw-engine/blob/main/docs/PERFORMANCE.md) · [Studies](https://github.com/anamankev/hnsw-engine/blob/main/docs/STUDIES.md)
 
 <br>
 
-<div align="center">
+<a href="https://github.com/anamankev/two-stage-recsys">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/card-two-stage-recsys-dark.svg">
+    <img src="assets/card-two-stage-recsys-light.svg" width="100%" alt="two-stage-recsys. NDCG@10 on MovieLens-1M with full-catalog ranking: popularity 0.0193, item-item co-occurrence 0.0276, tuned implicit ALS 0.0445, two-tower with exact retrieval 0.0615, two-tower via hnsw-engine 0.0619, two-tower plus LightGBM ranker 0.0906.">
+  </picture>
+</a>
 
-### 💡 Open to
+**[two-stage-recsys](https://github.com/anamankev/two-stage-recsys)** is a movie recommender built the way large production systems are: a PyTorch two-tower model retrieves 200 candidates through hnsw-engine, a LightGBM LambdaRank model reorders them, and a FastAPI service returns the top ten. It is evaluated with full-catalog ranking, a leakage-tested temporal split and 95% bootstrap intervals. The first ranker scored below plain retrieval, and the write-up shows how that was diagnosed and fixed.
+[Results](https://github.com/anamankev/two-stage-recsys/blob/main/docs/RESULTS.md) · [Analysis](https://github.com/anamankev/two-stage-recsys/blob/main/docs/ANALYSIS.md) · [Model card](https://github.com/anamankev/two-stage-recsys/blob/main/docs/MODEL_CARD.md)
 
-Research Collaborations • Internships • Open Source • Speaking Engagements • Partnerships
+## Research and experience
 
-</div>
+- **[Pulse Energies](https://pulseenergies.com)**, founder and CEO, 2025 to now. Physics-constrained AI for forecasting and orchestrating electricity grids.
+- **SmartPyro**, research. [*AI-Optimized Pyrolysis: A Machine Learning Framework for Predictive Waste-to-Energy Conversion*](https://sciforum.net/paper/view/30748), with Sanjith Balamurali, at the 3rd International Online Conference on Energies (IOCEN 2026). Also presented at ASME ES2026.
+- **Lumiere Research Program**, machine learning researcher, 2025. A PyTorch classifier for vector boson polarization in simulated Large Hadron Collider events, supervised by Dr. Gaetano Barone of Brown University.
+- **Hubtel**, technical product manager intern, 2026, on merchant payments. **IPMC Ghana**, software engineer intern, 2025, on an observability dashboard built with GraphQL and React.
+- **Awards.** IFoRE Medalist, first award in physics and engineering interdisciplinary research. SSRN Emerging Scholar Award.
 
----
+## Toolbox
 
-<div align="center">
+`Python` `NumPy` `Numba` `PyTorch` `LightGBM` `FastAPI` `Docker` `pytest` `Java` `SQL`
 
-## ⚡ Building the Operating System for Electricity
-
-*"Engineering software that powers the next billion people."*
-
-<br>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563EB,50:1E3A5F,100:0F172A&height=120&section=footer&text=Thanks%20for%20visiting!&fontSize=22&fontColor=FFFFFF&animation=fadeIn"/>
-
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
+  <img src="assets/footer-light.svg" width="100%" alt="">
+</picture>
