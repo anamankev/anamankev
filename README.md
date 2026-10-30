@@ -33,6 +33,14 @@ On GitHub I rebuild the systems I want to understand. I start from the paper, te
 **[two-stage-recsys](https://github.com/anamankev/two-stage-recsys)** is a movie recommender built the way large production systems are: a PyTorch two-tower model retrieves 200 candidates through hnsw-engine, a LightGBM LambdaRank model reorders them, and a FastAPI service returns the top ten. It is evaluated with full-catalog ranking, a leakage-tested temporal split and 95% bootstrap intervals. The first ranker scored below plain retrieval, and the write-up shows how that was diagnosed and fixed.
 [Results](https://github.com/anamankev/two-stage-recsys/blob/main/docs/RESULTS.md) · [Analysis](https://github.com/anamankev/two-stage-recsys/blob/main/docs/ANALYSIS.md) · [Model card](https://github.com/anamankev/two-stage-recsys/blob/main/docs/MODEL_CARD.md)
 
+<p align="center">
+  <a href="https://github.com/anamankev/options-pricing-engine"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/options-pricing-engine-facts-dark.svg"><img src="assets/options-pricing-engine-facts-light.svg" width="418" alt="options-pricing-engine. Black-Scholes, American trees, Monte Carlo and implied volatility, checked against QuantLib. Median relative gap to QuantLib prices 4e-16; all 18 Ju-Zhong American prices within 2e-3; 367 tests."></picture></a>
+  <a href="https://github.com/anamankev/options-pricing-engine"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/options-pricing-engine-chart-dark.svg"><img src="assets/options-pricing-engine-chart-light.svg" width="418" alt="Pricing error of an American put against runtime, log scales. CRR falls from 2.8e-2 to 1.3e-4 by 16 ms; Leisen-Reimer from 7.5e-3 to 1.5e-5 by 15 ms; BBSR, nearly tied with Leisen-Reimer up to about 10 ms, reaches 1.6e-6 at 206 ms."></picture></a>
+</p>
+
+**[options-pricing-engine](https://github.com/anamankev/options-pricing-engine)** prices European and American options with Black-Scholes-Merton, four binomial trees, Monte Carlo with variance reduction, and safeguarded implied-volatility solvers. Its results are checked against 50-digit arithmetic, against QuantLib on 1,800 cases, and against published American-option benchmarks. Two numerical studies, on solver accuracy and tree convergence, had their hypotheses committed before they ran, and the write-ups report the ones that failed.
+[Results](https://github.com/anamankev/options-pricing-engine#results) · [Study A: implied volatility](https://github.com/anamankev/options-pricing-engine/blob/main/docs/notes/study_a.md) · [Study B: trees](https://github.com/anamankev/options-pricing-engine/blob/main/docs/notes/study_b.md)
+
 ## Research and experience
 
 - **[Pulse Energies](https://pulseenergies.com)**, founder and CEO, 2025 to now. Physics-constrained AI for forecasting and orchestrating electricity grids.
@@ -43,7 +51,7 @@ On GitHub I rebuild the systems I want to understand. I start from the paper, te
 
 ## Toolbox
 
-`Python` `NumPy` `Numba` `PyTorch` `LightGBM` `FastAPI` `Docker` `pytest` `Java` `SQL`
+`Python` `NumPy` `SciPy` `Numba` `PyTorch` `LightGBM` `FastAPI` `Docker` `pytest` `Java` `SQL`
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"><img src="assets/footer-light.svg" width="100%" alt=""></picture>

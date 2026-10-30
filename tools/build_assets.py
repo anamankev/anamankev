@@ -20,7 +20,7 @@ screen and drop one under the other on a phone, so the text stays readable.
 
 import json
 from html import escape
-from math import dist
+from math import dist, log10
 from pathlib import Path
 
 TOOLS = Path(__file__).resolve().parent
@@ -81,6 +81,23 @@ RECSYS_NDCG = [
     ("Two-tower, exact retrieval", 0.0615, 0.0570, 0.0664, False),
     ("Two-tower via hnsw-engine", 0.0619, 0.0573, 0.0668, False),
     ("Two-tower + LightGBM ranker", 0.0906, 0.0848, 0.0959, True),
+]
+
+# options-pricing-engine, Study B at commit 322cba5, case R4c (American put, S = K = 40,
+# sigma = 0.2, T = 7/12, r = 0.0488). Runtime in ms: experiments/results/tables/
+# study_b_summary.json, "timing_ms" (median of 7, pure Python, Apple M5). Error: the absolute
+# "error" column of study_b_errors.csv at the same N, against QuantLib's QdFp engine.
+PRICING_PARETO = [
+    # name, is this the highlighted method?, then (steps N, runtime ms, absolute error)
+    ("CRR", False, [(10, 0.061, 0.0284), (20, 0.098, 0.014), (40, 0.17, 0.00698), (80, 0.317, 0.00343),
+                    (160, 0.635, 0.00171), (320, 1.704, 0.000833), (640, 3.644, 0.000416),
+                    (1280, 8.47, 0.000205), (2000, 16.118, 0.000131)]),
+    ("Leisen-Reimer", False, [(11, 0.069, 0.00751), (21, 0.108, 0.00272), (41, 0.19, 0.00128),
+                              (81, 0.347, 0.000549), (161, 0.706, 0.000261), (321, 1.551, 0.00011),
+                              (641, 3.446, 5.36e-05), (1281, 8.253, 2.35e-05), (2001, 15.435, 1.51e-05)]),
+    ("BBSR", True, [(16, 0.261, 0.00172), (32, 0.307, 0.000874), (64, 0.493, 0.000653), (128, 0.901, 0.00026),
+                    (256, 1.799, 0.000109), (512, 3.831, 5.09e-05), (1024, 8.991, 1.97e-05),
+                    (2048, 21.343, 9.06e-06), (4096, 61.957, 3.29e-06), (8192, 205.927, 1.63e-06)]),
 ]
 
 # A real index and one real search through it. See tools/trace_search.py.
@@ -398,6 +415,73 @@ def recsys_chart(theme):
     return svg(TILE_W, PROJECT_H, f"NDCG@10 on MovieLens-1M with full-catalog ranking: {listing}.", "".join(parts))
 
 
+def pricing_facts(theme):
+    return facts_tile(
+        theme,
+        "DERIVATIVES PRICING",
+        "options-pricing-engine",
+        ["Black-Scholes, American trees, Monte Carlo and", "implied volatility, checked against QuantLib."],
+        [
+            # options-pricing-engine/docs/notes/phase_1_quantlib_reconciliation.md, price median.
+            ("4e-16", "median relative gap to QuantLib prices"),
+            # options-pricing-engine/README.md, Validation: all 18 Ju-Zhong (1999) values.
+            ("18 / 18", "Ju-Zhong American prices within 2e-3"),
+            ("367", "tests, incl. QuantLib cross-checks"),
+        ],
+        "options-pricing-engine: Black-Scholes, American binomial trees, Monte Carlo and implied volatility, "
+        "checked against QuantLib. Median relative gap to QuantLib prices 4e-16; all 18 Ju-Zhong American "
+        "prices reproduced within 2e-3; 367 tests.",
+    )
+
+
+def pricing_chart(theme):
+    """Log-log error against runtime. Lines are told apart by dash and label, not colour alone."""
+    t = THEMES[theme]
+    parts = chart_start(theme, "Pricing error against runtime", "American put  ·  error vs QuantLib  ·  pure Python, Apple M5")
+    x0, x1, y0, y1 = 72, 330, 96, 268  # plot area
+    t_lo, t_hi, e_lo, e_hi = 0.05, 300.0, 1e-6, 5e-2  # axis ranges: ms, absolute error
+
+    def at(ms, err):
+        fx = (log10(ms) - log10(t_lo)) / (log10(t_hi) - log10(t_lo))
+        fy = (log10(e_hi) - log10(err)) / (log10(e_hi) - log10(e_lo))
+        return round(x0 + fx * (x1 - x0), 1), round(y0 + fy * (y1 - y0), 1)
+
+    for exponent in (-2, -4, -6):  # recessive grid with labels on the left
+        _, gy = at(t_lo, 10.0**exponent)
+        parts.append(line(x0, gy, x1, gy, t["border"]))
+        parts.append(
+            f'<text x="{x0 - 8}" y="{gy + 4:g}" font-family="{SANS}" font-size="11.5" fill="{t["ink2"]}" '
+            f'text-anchor="end">10<tspan dy="-5" font-size="8.5">{exponent}</tspan></text>'
+        )
+    for ms in (0.1, 1, 10, 100):
+        gx, _ = at(ms, e_lo)
+        parts.append(line(gx, y1, gx, y1 + 4, t["ink2"]))
+        parts.append(text(gx, y1 + 19, f"{ms:g} ms", 11.5, t["ink2"], anchor="middle"))
+
+    # Labels sit just past each line's last point, nudged so none touches a neighbouring line.
+    label_offset = {"CRR": (8, 4), "Leisen-Reimer": (6, -7), "BBSR": (8, 4)}
+    for name, mine, points in PRICING_PARETO:
+        xy = [at(ms, err) for _, ms, err in points]
+        colour = t["accent"] if mine else (t["context"] if name == "CRR" else t["ink2"])
+        dash = ' stroke-dasharray="4 3"' if name == "CRR" else ""
+        path_d = "M" + " L".join(f"{px:g} {py:g}" for px, py in xy)
+        parts.append(
+            f'<path d="{path_d}" fill="none" stroke="{colour}" stroke-width="{2 if mine else 1.6}"{dash} '
+            'stroke-linecap="round" stroke-linejoin="round"/>'
+        )
+        for px, py in xy:
+            parts.append(f'<circle cx="{px:g}" cy="{py:g}" r="{3 if mine else 2.4}" fill="{colour}" stroke="{t["card"]}" stroke-width="1.2"/>')
+        dx, dy = label_offset[name]
+        end_x, end_y = xy[-1]
+        parts.append(text(end_x + dx, end_y + dy, name, 12, t["ink"] if mine else t["ink2"], 700 if mine else 500))
+
+    listing = "; ".join(
+        f"{name} from {points[0][2]:.1e} at {points[0][1]:g} ms to {points[-1][2]:.1e} at {points[-1][1]:g} ms"
+        for name, _, points in PRICING_PARETO
+    )
+    return svg(TILE_W, PROJECT_H, f"Absolute pricing error of an American put against runtime, log scales: {listing}.", "".join(parts))
+
+
 # ---------------------------------------------------------------------------
 # Footer: a thin line with a pulse in it
 # ---------------------------------------------------------------------------
@@ -426,6 +510,8 @@ PICTURES = {
     "hnsw-engine-chart": hnsw_chart,
     "two-stage-recsys-facts": recsys_facts,
     "two-stage-recsys-chart": recsys_chart,
+    "options-pricing-engine-facts": pricing_facts,
+    "options-pricing-engine-chart": pricing_chart,
     "footer": footer,
 }
 
