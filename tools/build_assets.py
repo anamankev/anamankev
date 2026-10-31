@@ -426,11 +426,11 @@ def pricing_facts(theme):
             ("4e-16", "median relative gap to QuantLib prices"),
             # options-pricing-engine/README.md, Validation: all 18 Ju-Zhong (1999) values.
             ("18 / 18", "Ju-Zhong American prices within 2e-3"),
-            ("468", "tests, incl. QuantLib cross-checks"),
+            ("493", "tests, incl. QuantLib cross-checks"),
         ],
         "options-pricing-engine: Black-Scholes, American binomial trees, Monte Carlo and implied volatility, "
         "checked against QuantLib. Median relative gap to QuantLib prices 4e-16; all 18 Ju-Zhong American "
-        "prices reproduced within 2e-3; 468 tests.",
+        "prices reproduced within 2e-3; 493 tests.",
     )
 
 
