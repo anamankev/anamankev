@@ -83,7 +83,7 @@ RECSYS_NDCG = [
     ("Two-tower + LightGBM ranker", 0.0906, 0.0848, 0.0959, True),
 ]
 
-# options-pricing-engine, Study B at commit 322cba5, case R4c (American put, S = K = 40,
+# options-pricing-engine, Study B at commit 8d2666d, case R4c (American put, S = K = 40,
 # sigma = 0.2, T = 7/12, r = 0.0488). Runtime in ms: experiments/results/tables/
 # study_b_summary.json, "timing_ms" (median of 7, pure Python, Apple M5). Error: the absolute
 # "error" column of study_b_errors.csv at the same N, against QuantLib's QdFp engine.
@@ -426,11 +426,11 @@ def pricing_facts(theme):
             ("4e-16", "median relative gap to QuantLib prices"),
             # options-pricing-engine/README.md, Validation: all 18 Ju-Zhong (1999) values.
             ("18 / 18", "Ju-Zhong American prices within 2e-3"),
-            ("367", "tests, incl. QuantLib cross-checks"),
+            ("352", "tests, incl. QuantLib cross-checks"),
         ],
         "options-pricing-engine: Black-Scholes, American binomial trees, Monte Carlo and implied volatility, "
         "checked against QuantLib. Median relative gap to QuantLib prices 4e-16; all 18 Ju-Zhong American "
-        "prices reproduced within 2e-3; 367 tests.",
+        "prices reproduced within 2e-3; 352 tests.",
     )
 
 
