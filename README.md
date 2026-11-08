@@ -18,6 +18,14 @@ On GitHub I rebuild the systems I want to understand. I start from the paper, te
 ## Selected work
 
 <p align="center">
+  <a href="https://github.com/anamankev/brier"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brier-facts-dark.svg"><img src="assets/brier-facts-light.svg" width="418" alt="brier. A prediction-market exchange in Rust, built to a regulated venue's standard, with play money. 12.3 million orders matched per second on one core; 1,000 crashes under load with no acknowledged order lost; 10 million commands with no divergence from an independent reference engine."></picture></a>
+  <a href="https://github.com/anamankev/brier"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brier-chart-dark.svg"><img src="assets/brier-chart-light.svg" width="418" alt="Where an order's time goes, log scale: matching p99 334 ns; matching with ledger checks p99 1.4 microseconds; durable disk flush median 3.95 ms; order to acknowledgment through the gateway p99 9.14 ms."></picture></a>
+</p>
+
+**[brier](https://github.com/anamankev/brier)** is a prediction-market exchange, named after the Brier score, built the way a regulated venue has to be and run with play money. It has a deterministic Rust matching engine and a double-entry ledger, held event for event to an independent Python reference engine. Its journal acknowledges no order before it is on disk, proven by killing it 1,000 times under load. Markets settle from public data (BLS, FRED, NOAA) with the evidence hashed into the journal, a market maker trades only through the public API, and surveillance detects wash trading, spoofing and insider-like trading. Every claim has a pre-registered test: the surveillance study reports two detectors that passed and two that did not.
+[Measured results](https://github.com/anamankev/brier#measured-so-far) · [Specification](https://github.com/anamankev/brier/blob/main/docs/SPEC.md) · [Surveillance study](https://github.com/anamankev/brier/blob/main/docs/notes/surveillance.md)
+
+<p align="center">
   <a href="https://github.com/anamankev/hnsw-engine"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/hnsw-engine-facts-dark.svg"><img src="assets/hnsw-engine-facts-light.svg" width="418" alt="hnsw-engine. HNSW built from the original paper, twice. 4,447 queries per second at recall 0.95 or better on one million vectors; 39 times faster than exact search; 336 tests."></picture></a>
   <a href="https://github.com/anamankev/hnsw-engine"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/hnsw-engine-chart-dark.svg"><img src="assets/hnsw-engine-chart-light.svg" width="418" alt="Queries per second at recall 0.95 or better on SIFT-1M, one thread: exact search 114, hnsw-engine 4,447, hnswlib 6,193, FAISS HNSW 10,301."></picture></a>
 </p>
@@ -51,7 +59,7 @@ On GitHub I rebuild the systems I want to understand. I start from the paper, te
 
 ## Toolbox
 
-`Python` `NumPy` `SciPy` `Numba` `PyTorch` `LightGBM` `FastAPI` `Docker` `pytest` `Java` `SQL`
+`Rust` `Python` `TypeScript` `NumPy` `SciPy` `Numba` `PyTorch` `LightGBM` `Tokio` `FastAPI` `Next.js` `PostgreSQL` `Docker` `pytest` `Java` `SQL`
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"><img src="assets/footer-light.svg" width="100%" alt=""></picture>

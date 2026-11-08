@@ -100,6 +100,18 @@ PRICING_PARETO = [
                     (2048, 21.343, 9.06e-06), (4096, 61.957, 3.29e-06), (8192, 205.927, 1.63e-06)]),
 ]
 
+# brier/README.md, "Measured so far" (Apple M5, AC power). Microseconds. Matching: the
+# performance note's p99 for matching alone and with the ledger in the order path; the disk
+# flush: the durability note's median F_FULLFSYNC; the gateway: order to acknowledgment p99
+# at 10,000 orders/s from the gateway note.
+BRIER_LATENCY = [
+    # what, which statistic, microseconds, label, is this the highlighted bar?
+    ("Matching", "p99", 0.334, "334 ns", True),
+    ("Matching + ledger checks", "p99", 1.4, "1.4 µs", True),
+    ("Durable disk flush", "median", 3950, "3.95 ms", False),
+    ("Order to acknowledgment", "p99, via the gateway", 9140, "9.14 ms", False),
+]
+
 # A real index and one real search through it. See tools/trace_search.py.
 GRAPH = json.loads((TOOLS / "header_graph.json").read_text(encoding="utf-8"))
 
@@ -482,6 +494,49 @@ def pricing_chart(theme):
     return svg(TILE_W, PROJECT_H, f"Absolute pricing error of an American put against runtime, log scales: {listing}.", "".join(parts))
 
 
+def brier_facts(theme):
+    return facts_tile(
+        theme,
+        "MARKET INFRASTRUCTURE",
+        "brier",
+        ["A prediction-market exchange in Rust, built", "to a regulated venue's standard. Play money."],
+        [
+            # brier/README.md, Measured so far: matching throughput, one core, median of 5 runs.
+            ("12.3M", "orders matched per second, one core"),
+            # brier/README.md, Measured so far: crash safety, 0 of 6,058,014 lost.
+            ("1,000", "crashes under load, 0 acked orders lost"),
+            # brier/README.md, Measured so far: agreement with an independent reference engine.
+            ("10M", "commands vs a reference engine, 0 diffs"),
+        ],
+        "brier: a prediction-market exchange in Rust, built to a regulated venue's standard, with play money. "
+        "12.3 million orders matched per second on one core; 1,000 crashes under load with no acknowledged "
+        "order lost; 10 million commands with no divergence from an independent reference engine.",
+    )
+
+
+def brier_chart(theme):
+    """Log-scale bars: the engine is nanoseconds, durability is milliseconds."""
+    t = THEMES[theme]
+    parts = chart_start(theme, "Where an order's time goes", "log scale  ·  Apple M5  ·  full device flush per batch")
+    lo, hi, full_length = 0.1, 20000.0, 300  # axis range in microseconds, and its length
+
+    def length(us):
+        return full_length * (log10(us) - log10(lo)) / (log10(hi) - log10(lo))
+
+    for i, (name, stat, us, label, mine) in enumerate(BRIER_LATENCY):
+        y = 106 + 54 * i
+        parts.append(
+            f'<text x="{LEFT}" y="{y}" font-family="{SANS}" font-size="13">'
+            f'<tspan font-weight="{700 if mine else 600}" fill="{t["ink"]}">{escape(name)}</tspan>'
+            f'<tspan dx="7" font-size="12" fill="{t["ink2"]}">{escape(stat)}</tspan></text>'
+        )
+        bar_length = length(us)
+        parts.append(bar(LEFT, y + 9, bar_length, 14, t["accent"] if mine else t["context"]))
+        parts.append(text(LEFT + bar_length + 8, y + 21, label, 13, t["ink"], 700 if mine else 500))
+    listing = "; ".join(f"{name} ({stat}) {label}" for name, stat, _, label, _ in BRIER_LATENCY)
+    return svg(TILE_W, PROJECT_H, f"Where an order's time goes, log scale: {listing}.", "".join(parts))
+
+
 # ---------------------------------------------------------------------------
 # Footer: a thin line with a pulse in it
 # ---------------------------------------------------------------------------
@@ -506,6 +561,8 @@ def footer(theme):
 PICTURES = {
     "name": name_tile,
     "graph": graph_tile,
+    "brier-facts": brier_facts,
+    "brier-chart": brier_chart,
     "hnsw-engine-facts": hnsw_facts,
     "hnsw-engine-chart": hnsw_chart,
     "two-stage-recsys-facts": recsys_facts,
